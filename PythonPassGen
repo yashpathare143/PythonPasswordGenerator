@@ -1,21 +1,31 @@
+# importing string and random module
 import string
 import random
 
 
 if __name__ == "__main__":
+    # Assigning lowercase alphabets to 's1' variable
     s1 = string.ascii_lowercase
+    # Assigning uppercase alphabets to 's2' variable
     s2 = string.ascii_uppercase
+    # Assigning digits/integers/numbers to 's3' variable
     s3 = string.digits
+    # Assigning all punctuation marks to 's4' variable
     s4 = string.punctuation
 
-passlen = input("Enter password length: ")
+# This will determine the length of your password
+passlen = int(input("Enter password length: "))
 
+
+# This variable 's' will contain all alphabets(uppercase/lowercase), numbers, and punctuation marks. 
 s = []
 s.extend(list(s1))
 s.extend(list(s2))
 s.extend(list(s3))
 s.extend(list(s4)) 
 
+# This will shuffle 's' varibale, which contains alphabets(uppercase/lowercase), numbers, and punctuation marks.
 random.shuffle(s)
 
-print("".join(s[0:passlen])) 
+# This will finally print your password
+print("Your password is: " + "".join(s[0:passlen])) 
